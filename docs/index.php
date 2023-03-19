@@ -55,10 +55,8 @@
                 <div class="col-md-2 col-md-offset-5  col-sm-3 col-sm-offset-1  col-xs-12">
                     <div class="header-half header-social">
                         <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/grupodb" target="_blank"><i
-                                        class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es"
-                                    target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/grupodb" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -143,56 +141,35 @@
                         <form action="" class=" form-inline">
 
                             <div class="form-group">
-                                <select id="lunchBegins" class="selectpicker" data-live-search="true"
-                                    data-live-search-style="begins" title="Tipo de Propiedad">
+                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Propiedad">
 
-                                    <option>Todos los Tipos</option>
-                                    <option>Casa</option>
-                                    <option>Departamento</option>
-                                    <option>Local Comercial</option>
-                                    <option>Lote</option>
-                                    <option>Finca</option>
-                                    <option>Cochera</option>
-                                    <option>Desarrollo Inmobiliario</option>
+                                    <option value=""><b>&nabla;</b>&nbsp;Todas las propiedades</option>
+                                    <?PHP while ($propiedad = mysqli_fetch_assoc($rtspropiedad)) { ?>
+                                        <option value="<?PHP echo $propiedad['idPropiedad']; ?>"> <?PHP echo $propiedad['nombrePropiedad']; ?></option>
+                                    <?PHP } ?>
 
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <select id="lunchBegins" class="selectpicker" data-live-search="true"
-                                    data-live-search-style="begins" title="Tipo de Operación">
+                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Operación">
 
-                                    <option>Todos los Tipos</option>
-                                    <option>Venta</option>
-                                    <option>Alquiler</option>
+                                    <option value=""><b>&nabla;</b>&nbsp;Todas las operaciones</option>
+                                    <?PHP while ($operacion = mysqli_fetch_assoc($rtsoperacion)) { ?>
+                                        <option value="<?PHP echo $operacion['idOperacion']; ?>"> <?PHP echo $operacion['nombreOperacion']; ?></option>
+                                    <?PHP } ?>
 
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <select id="lunchBegins" class="selectpicker" data-live-search="true"
-                                    data-live-search-style="begins" title="Localidad">
+                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Localidad">
 
-                                    <option>Todos las Localidades</option>
-                                    <option>Capital</option>
-                                    <option>Rawson</option>
-                                    <option>Chimbas</option>
-                                    <option>Rivadavia</option>
-                                    <option>Santa Lucía</option>
-                                    <option>Pocito</option>
-                                    <option>Caucete</option>
-                                    <option>Jáchal</option>
-                                    <option>Albardón</option>
-                                    <option>Sarmiento</option>
-                                    <option>25 de Mayo</option>
-                                    <option>San Martín</option>
-                                    <option>Calingasta</option>
-                                    <option>9 de Julio</option>
-                                    <option>Angaco</option>
-                                    <option>Valle Fértil</option>
-                                    <option>Iglesia</option>
-                                    <option>Ullúm</option>
-                                    <option>Zonda</option>
+                                    <option value=""><b>&nabla;</b>&nbsp;Todas las localidades</option>
+                                    <option value="">Localidad</option>
+                                    <?PHP while ($localidad = mysqli_fetch_assoc($rtslocalidad)) { ?>
+                                        <option value="<?PHP echo $localidad['idLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad']; ?></option>
+                                    <?PHP } ?>
 
                                 </select>
                             </div>
@@ -328,8 +305,7 @@
                             <div class="more-entry overflow">
                                 <h5>¿Querés ver más?</h5>
                                 <h5 class="tree-sub-ttl">Mostrar todos los inmuebles</h5>
-                                <a href="inmuebles.html"><button class="btn border-btn more-black"
-                                        value="inmuebles">Inmuebles</button></a>
+                                <a href="inmuebles.html"><button class="btn border-btn more-black" value="inmuebles">Inmuebles</button></a>
                             </div>
                         </div>
                     </div>
@@ -605,8 +581,7 @@
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="E-mail ... ">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-primary subscribe" type="button"><i
-                                                class="pe-7s-paper-plane pe-2x"></i></button>
+                                        <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
                                     </span>
                                 </div>
                                 <!-- /input-group -->
@@ -614,12 +589,9 @@
 
                             <div class="social pull-right">
                                 <ul>
-                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com/grupodb"
-                                            target="_blank" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a>
+                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com/grupodb" target="_blank" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a>
                                     </li>
-                                    <li><a class="wow fadeInUp animated"
-                                            href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es"
-                                            target="_blank" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a>
+                                    <li><a class="wow fadeInUp animated" href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es" target="_blank" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -640,8 +612,7 @@
                     <div class="bottom-menu pull-right">
                         <ul>
                             <li><a class="wow fadeInUp animated" href="index.html" data-wow-delay="0.2s">Inicio</a></li>
-                            <li><a class="wow fadeInUp animated" href="inmuebles.html"
-                                    data-wow-delay="0.3s">Inmuebles</a></li>
+                            <li><a class="wow fadeInUp animated" href="inmuebles.html" data-wow-delay="0.3s">Inmuebles</a></li>
                             <li><a class="wow fadeInUp animated" href="preguntas.html" data-wow-delay="0.4s">Preguntas
                                     Frecuentes</a></li>
                             <li><a class="wow fadeInUp animated" href="contacto.html" data-wow-delay="0.6s">Contacto</a>
