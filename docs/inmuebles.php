@@ -1,5 +1,6 @@
 <?PHP
 include('php/list_opciones.php');
+include('php/list_inmuebles.php');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -419,201 +420,11 @@ include('php/list_opciones.php');
 
                     <div class="col-md-12 clear">
                         <div id="list-type" class="proerty-th">
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="detalle-inmueble.html"><img src="assets/img/casa9.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="detalle-inmueble.html"> Casa en Albardón </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 132m2 </span>
-                                        <span class="proerty-price pull-right"> USD 120.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(5)|
-                                            <img src="assets/img/icon/shawer.png">(2)|
-                                            <img src="assets/img/icon/cars.png">(2)
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa2.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Depto Rivadavia </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 55m2 </span>
-                                        <span class="proerty-price pull-right"> $ 7.000.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(2)|
-                                            <img src="assets/img/icon/shawer.png">(1)|
-                                            <img src="assets/img/icon/cars.png">(0)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa3.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Depto interno </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 45m2 </span>
-                                        <span class="proerty-price pull-right"> $ 25.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(1)|
-                                            <img src="assets/img/icon/shawer.png">(1)|
-                                            <img src="assets/img/icon/cars.png">(0)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa4.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Llave Ferretería </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 30m </span>
-                                        <span class="proerty-price pull-right"> $ 4.000.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(0)|
-                                            <img src="assets/img/icon/shawer.png">(1)|
-                                            <img src="assets/img/icon/cars.png">(1)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa5.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Lote Pocito </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 580m2 </span>
-                                        <span class="proerty-price pull-right"> $ 2.000.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(0)|
-                                            <img src="assets/img/icon/shawer.png">(0)|
-                                            <img src="assets/img/icon/cars.png">(0)
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa6.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Depto Rivadavia </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 63m2 </span>
-                                        <span class="proerty-price pull-right"> $ 29.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(3)|
-                                            <img src="assets/img/icon/shawer.png">(2)|
-                                            <img src="assets/img/icon/cars.png">(1)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa7.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Casa Céntrica </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 102m2 </span>
-                                        <span class="proerty-price pull-right"> $ 300,000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(4)|
-                                            <img src="assets/img/icon/shawer.png">(2)|
-                                            <img src="assets/img/icon/cars.png">(2)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa8.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Depto en Consorcio </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 73m2 </span>
-                                        <span class="proerty-price pull-right"> $ 18.000.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(3)|
-                                            <img src="assets/img/icon/shawer.png">(2)|
-                                            <img src="assets/img/icon/cars.png">(1)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4 p0">
-                                <div class="box-two proerty-item">
-                                    <div class="item-thumb">
-                                        <a href="#"><img src="assets/img/casa1.jpeg"></a>
-                                    </div>
-
-                                    <div class="item-entry overflow">
-                                        <h5><a href="#"> Local Comercial </a></h5>
-                                        <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Superficie :</b> 35m2 </span>
-                                        <span class="proerty-price pull-right"> $ 45.000</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                        <div class="property-icon">
-                                            <img src="assets/img/icon/bed.png">(0)|
-                                            <img src="assets/img/icon/shawer.png">(2)|
-                                            <img src="assets/img/icon/cars.png">(1)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?PHP echo $listado; ?>
                         </div>
                     </div>
 
-                    <div class="col-md-12">
+                    <!--div class="col-md-12">
                         <div class="pull-right">
                             <div class="pagination">
                                 <ul>
@@ -626,7 +437,7 @@ include('php/list_opciones.php');
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div -->
                 </div>
             </div>
         </div>

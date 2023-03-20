@@ -76,7 +76,7 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     if (!empty($inmuebles['nombreLocalidad'])) {
         $domicilio .= "<br>&nbsp;<b>" . $inmuebles['nombreLocalidad'] . "</b>";
     }
-
+    /*
     $listado .= "<div class='col-md-6 col-lg-4 mb-4'>";
     $listado .= "<div class='property-entry h-100'>";
     $listado .= "<a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "' class='property-thumbnail'>";
@@ -106,7 +106,7 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     $listado .= "</ul>";
     $listado .= "</div>";
     $listado .= "</div>";
-    $listado .= "</div>";
+    $listado .= "</div>"; */
 
     $listado .= "<div class='col-sm-6 col-md-4 p0'>";
     $listado .= "<div class='box-two proerty-item'>";
@@ -118,7 +118,7 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     $listado .= "<div class='dot-hr'></div>";
     $listado .= "<span class='pull-left'><b> Superficie :</b>" . $superficieCubiertaInmueble . "</span>";
     $listado .= "<span class='proerty-price pull-right'>" . $valorInmueble . "</span>";
-    $listado .= "<p style='display: none;'>Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>";
+    $listado .= "<p style='display: none;'>" . $inmuebles['descripcionInmueble'] . "</p>";
     $listado .= "<div class='property-icon'>";
     $listado .= "<img src='assets/img/icon/bed.png'>(" . $habitacionesInmueble . ")|";
     $listado .= "<img src='assets/img/icon/shawer.png'>(" . $banosInmueble . ")|";
