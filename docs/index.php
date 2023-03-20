@@ -79,7 +79,7 @@ include('php/list_inmuebles_index.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="assets/img-logos/Isologo-RGB1.png" alt=""></a>
+                <a class="navbar-brand" href="index.php"><img src="assets/img-logos/Isologo-RGB1.png" alt=""></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,7 +88,7 @@ include('php/list_inmuebles_index.php');
                 <ul class="main-nav nav navbar-nav navbar-right">
 
                     <li class="wow fadeInDown" data-wow-delay="0.3s">
-                        <a class="active" href="index.html">Inicio</a>
+                        <a class="active" href="index.php">Inicio</a>
                     </li>
 
                     <li class="wow fadeInDown" data-wow-delay="0.5s">
@@ -145,7 +145,7 @@ include('php/list_inmuebles_index.php');
                         <form action="inmuebles.php" class=" form-inline">
 
                             <div class="form-group">
-                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Propiedad">
+                                <select id="lunchBegins" name="propiedad" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Propiedad">
 
                                     <option value=""><b>&nabla;</b>&nbsp;Todas las propiedades</option>
                                     <?PHP while ($propiedad = mysqli_fetch_assoc($rtspropiedad)) { ?>
@@ -156,7 +156,7 @@ include('php/list_inmuebles_index.php');
                             </div>
 
                             <div class="form-group">
-                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Operación">
+                                <select id="lunchBegins" name="operacion" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Operación">
 
                                     <option value=""><b>&nabla;</b>&nbsp;Todas las operaciones</option>
                                     <?PHP while ($operacion = mysqli_fetch_assoc($rtsoperacion)) { ?>
@@ -167,7 +167,7 @@ include('php/list_inmuebles_index.php');
                             </div>
 
                             <div class="form-group">
-                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Localidad">
+                                <select id="lunchBegins" name="localidad" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Localidad">
 
                                     <option value=""><b>&nabla;</b>&nbsp;Todas las localidades</option>
                                     <option value="">Localidad</option>
@@ -413,7 +413,7 @@ include('php/list_inmuebles_index.php');
                             <h4>Navegación </h4>
                             <div class="footer-title-line"></div>
                             <ul class="footer-menu">
-                                <li><a href="index.html">Inicio</a> </li>
+                                <li><a href="index.php">Inicio</a> </li>
                                 <li><a href="nosotros.html">Acerca de</a></li>
                                 <li><a href="servicios.html">Servicios</a> </li>
                                 <li><a href="inmuebles.php">Inmuebles</a> </li>
@@ -479,7 +479,7 @@ include('php/list_inmuebles_index.php');
                     </div-->
                     <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                         <div class="single-footer news-letter">
-                            <h4>Seguinos</h4>
+                            <h4>Cont&aacute;ctanos</h4>
                             <div class="footer-title-line"></div>
                             <p></p>
 
@@ -488,6 +488,8 @@ include('php/list_inmuebles_index.php');
                                     <li><a class="wow fadeInUp animated" href="https://www.facebook.com/grupodb" target="_blank" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li><a class="wow fadeInUp animated" href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es" target="_blank" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li><a class="wow fadeInUp animated" href="mailto:inmobiliaria@grupo-db.com.ar" target="_blank" data-wow-delay="0.6s"><i class="fa fa-envelope"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -502,12 +504,12 @@ include('php/list_inmuebles_index.php');
             <div class="container">
                 <div class="row">
                     <div class="pull-left">
-                        <span> (C) <a href="index.html">Grupo DB - Corredores Inmobiliarios</a> , Todos los derechos
+                        <span> (C) <a href="index.php">Grupo DB - Corredores Inmobiliarios</a> , Todos los derechos
                             reservados 2023 </span>
                     </div>
                     <div class="bottom-menu pull-right">
                         <ul>
-                            <li><a class="wow fadeInUp animated" href="index.html" data-wow-delay="0.2s">Inicio</a></li>
+                            <li><a class="wow fadeInUp animated" href="index.php" data-wow-delay="0.2s">Inicio</a></li>
                             <li><a class="wow fadeInUp animated" href="inmuebles.php" data-wow-delay="0.3s">Inmuebles</a></li>
                             <li><a class="wow fadeInUp animated" href="preguntas.html" data-wow-delay="0.4s">Preguntas
                                     Frecuentes</a></li>
