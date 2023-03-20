@@ -204,20 +204,6 @@ include('php/list_inmuebles_index.php');
                     <?PHP echo $listado; ?>
 
                     <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="detalle-inmueble.html"><img src="assets/img/casa1.jpeg"></a>
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="detalle-inmueble.html">Local comercial </a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie:</b> 35m2 </span>
-                                <span class="proerty-price pull-right">$ 55.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 p0">
                         <div class="box-tree more-proerty text-center">
                             <div class="item-tree-icon">
                                 <a href="inmuebles.html"> <i class="fa fa-th"></i></a>
@@ -409,7 +395,7 @@ include('php/list_inmuebles_index.php');
 
                     <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                         <div class="single-footer">
-                            <h4>Acerca de nosotros </h4>
+                            <h4>nosotros </h4>
                             <div class="footer-title-line"></div>
 
                             <img src="assets/img-logos/Isologo-RGB.png" alt="" class="wow pulse" data-wow-delay="1s">
@@ -437,7 +423,7 @@ include('php/list_inmuebles_index.php');
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                    <!--div class="col-md-3 col-sm-6 wow fadeInRight animated">
                         <div class="single-footer">
                             <h4>Últimas entradas</h4>
                             <div class="footer-title-line"></div>
@@ -490,22 +476,12 @@ include('php/list_inmuebles_index.php');
 
                             </ul>
                         </div>
-                    </div>
+                    </div-->
                     <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                         <div class="single-footer news-letter">
-                            <h4>Dejanos tu mail</h4>
+                            <h4>Seguinos</h4>
                             <div class="footer-title-line"></div>
-                            <p>Escribí tu mail en el campo y nos comunicaremos con vos.</p>
-
-                            <form>
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="E-mail ... ">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
-                                    </span>
-                                </div>
-                                <!-- /input-group -->
-                            </form>
+                            <p></p>
 
                             <div class="social pull-right">
                                 <ul>
