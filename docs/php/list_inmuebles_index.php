@@ -83,10 +83,10 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     $listado .= "<div class='col-sm-6 col-md-3 p0'>";
     $listado .= "<div class='box-two proerty-item'>";
     $listado .= "<div class='item-thumb'>";
-    $listado .= "<a href='detalle-inmueble.html'><img src='" . $nomimg . "'></a>";
+    $listado .= "<a href='detalle-inmueble.php'><img src='" . $nomimg . "'></a>";
     $listado .= "</div>";
     $listado .= "<div class='item-entry overflow'>";
-    $listado .= "<h5><a href='detalle-inmueble.html'>" .  $inmuebles['tituloInmueble'] . "</a></h5>";
+    $listado .= "<h5><a href='detalle-inmueble.php'>" .  $inmuebles['tituloInmueble'] . "</a></h5>";
     $listado .= "<div class='dot-hr'></div>";
     $listado .= "<span class='pull-left'><b>Superficie:</b>" . $superficieCubiertaInmueble . "</span>";
     $listado .= "<span class='proerty-price pull-right'>$ 55.000</span>";

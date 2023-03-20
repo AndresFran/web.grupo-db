@@ -160,8 +160,8 @@ include('php/det_inmueble.php');
 
                     <div class="single-property-wrapper">
                         <div class="single-property-header">
-                            <h1 class="property-title pull-left">Casa en Albardón</h1>
-                            <span class="property-price pull-right">USD 120.000</span>
+                            <h1 class="property-title pull-left"><?PHP echo $inmuebles['tituloInmueble']; ?></h1>
+                            <span class="property-price pull-right"><?PHP echo $valorInmueble; ?></span>
                         </div>
 
                         <div class="property-meta entry-meta clearfix ">
@@ -172,7 +172,7 @@ include('php/det_inmueble.php');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Operación</span>
-                                    <span class="property-info-value">VENTA</span>
+                                    <span class="property-info-value"><?PHP echo $inmuebles['nombreOperacion']; ?></span>
                                 </span>
                             </div>
 
@@ -182,7 +182,7 @@ include('php/det_inmueble.php');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Superficie</span>
-                                    <span class="property-info-value">132<b class="property-info-unit">m2</b></span>
+                                    <span class="property-info-value"><?PHP echo $superficieCubiertaInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -192,7 +192,7 @@ include('php/det_inmueble.php');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Habitaciones</span>
-                                    <span class="property-info-value">5</span>
+                                    <span class="property-info-value"><?PHP echo $habitacionesInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -201,8 +201,8 @@ include('php/det_inmueble.php');
                                     <img src="assets/img/icon/cars-orange.png">
                                 </span>
                                 <span class="property-info-entry">
-                                    <span class="property-info-label">Cocheras</span>
-                                    <span class="property-info-value">2</span>
+                                    <span class="property-info-label">Cochera</span>
+                                    <span class="property-info-value"><?PHP echo $cocheraInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -212,7 +212,7 @@ include('php/det_inmueble.php');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Mejoras</span>
-                                    <span class="property-info-value">Si</span>
+                                    <span class="property-info-value"><?PHP echo $mejorasInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -222,7 +222,7 @@ include('php/det_inmueble.php');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Sup. Total</span>
-                                    <span class="property-info-value">2500<b class="property-info-unit">m2</b></span>
+                                    <span class="property-info-value"><?PHP echo $superficieTotalInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -232,7 +232,7 @@ include('php/det_inmueble.php');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Baños</span>
-                                    <span class="property-info-value">3</span>
+                                    <span class="property-info-value"><?PHP $banosInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -243,10 +243,7 @@ include('php/det_inmueble.php');
                         <div class="section">
                             <h4 class="s-property-title">Descripción</h4>
                             <div class="s-property-content">
-                                <p>Espectacular casa en Albardón, cerca de la ruta. Ideal para fin de semana o vivienda
-                                    permanente.
-                                    Tiene un amplio jardín con pileta, quincho y parrillero.
-                                    Hay buena señal de internet y tiene todos los servicios disponibles.
+                                <p><?PHP echo $inmuebles['descripcionInmueble']; ?>
                                 </p>
                             </div>
                         </div>
@@ -756,14 +753,14 @@ include('php/det_inmueble.php');
                                 <ul class="footer-blog">
                                     <li>
                                         <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
-                                            <a href="detalle-inmueble.html">
+                                            <a href="detalle-inmueble.php">
                                                 <img src="assets/img/casa10.jpeg">
                                             </a>
                                             <span class="blg-date">15/10/2022</span>
 
                                         </div>
                                         <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
-                                            <h6> <a href="detalle-inmueble.html">Terreno 100 ha </a></h6> 
+                                            <h6> <a href="detalle-inmueble.php">Terreno 100 ha </a></h6> 
                                             <p style="line-height: 17px; padding: 8px 2px;">Terreno apto para desarrollo inmobiliario</p>
                                         </div>
                                     </li> 
