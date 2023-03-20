@@ -32,7 +32,8 @@ $queryinmuebles = "SELECT * FROM vista_inmuebles WHERE baja != '1' $filtro ORDER
 
 $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);
 
-$listado = "<div class='row mb-5'>";
+//$listado = "<div class='row mb-5'>";
+$listado = "";
 
 while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
 
@@ -77,36 +78,7 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
         $domicilio .= "<br>&nbsp;<b>" . $inmuebles['nombreLocalidad'] . "</b>";
     }
 
-    $listado .= "<div class='col-md-6 col-lg-4 mb-4'>";
-    $listado .= "<div class='property-entry h-100'>";
-    $listado .= "<a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "' class='property-thumbnail'>";
-    $listado .= "<div class='offer-type-wrap'>";
-    $listado .= "<span class='offer-type bg-success'>" . $inmuebles['nombrePropiedad'] . "</span>";
-    $listado .= "<span class='offer-type bg-secondary'>" . $inmuebles['nombreOperacion'] . "</span>";
-    $listado .= "</div>";
-    $listado .= "<img src='" . $nomimg . "' alt='" . $idimg . "' class='img-fluid-list'>";
-    $listado .= "</a>";
-    $listado .= "<div class='p-4 property-body'>";
-    $listado .= "<h2 class='property-title'><a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "'>" .  $inmuebles['tituloInmueble'] . "</a></h2>";
-    $listado .= "<span class='property-location d-block mb-3'><span class='property-icon icon-room'></span>" . $inmuebles['domicilioCalleInmueble'] . $domicilio . "</span>";
-    $listado .= "<strong class='property-price text-primary mb-3 d-block text-success'>" . $valorInmueble . "</strong>";
-    $listado .= "<ul class='property-specs-wrap mb-3 mb-lg-0'>";
-    $listado .= "<li>";
-    $listado .= "<span class=property-specs'>Habitaciones</span>";
-    $listado .= "<span class='property-specs-number'><br>" . $habitacionesInmueble . " </span>";
-    $listado .= "</li>";
-    $listado .= "<li>";
-    $listado .= "<span class='property-specs'>Baños</span>";
-    $listado .= "<span class='property-specs-number'>" . $banosInmueble . "</span>";
-    $listado .= "</li>";
-    $listado .= "<li>";
-    $listado .= "<span class='property-specs'>Superficie</span>";
-    $listado .= "<span class='property-specs-number'>" . $superficieCubiertaInmueble . "</span>";
-    $listado .= "</li>";
-    $listado .= "</ul>";
-    $listado .= "</div>";
-    $listado .= "</div>";
-    $listado .= "</div>";
+
 
     $listado .= "<div class='col-sm-6 col-md-3 p0'>";
     $listado .= "<div class='box-two proerty-item'>";
@@ -122,4 +94,4 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     $listado .= "</div>";
     $listado .= "</div>";
 }
-$listado .= "</div>";
+//$listado .= "</div>";

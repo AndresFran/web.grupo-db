@@ -1,5 +1,6 @@
 <?PHP
 include('php/list_opciones.php');
+include('php/list_inmuebles_index.php');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -199,6 +200,9 @@ include('php/list_opciones.php');
 
             <div class="row">
                 <div class="proerty-th">
+
+                    <?PHP echo $listado; ?>
+
                     <div class="col-sm-6 col-md-3 p0">
                         <div class="box-two proerty-item">
                             <div class="item-thumb">
@@ -209,93 +213,6 @@ include('php/list_opciones.php');
                                 <div class="dot-hr"></div>
                                 <span class="pull-left"><b>Superficie:</b> 35m2 </span>
                                 <span class="proerty-price pull-right">$ 55.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="#"><img src="assets/img/casa2.jpeg"></a>
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="#"> Departamento interno</a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie:</b> 45m2 </span>
-                                <span class="proerty-price pull-right">$ 24.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="#"><img src="assets/img/casa3.jpeg"></a>
-
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="#">Depto en consorcio </a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie:</b> 72m2 </span>
-                                <span class="proerty-price pull-right">$ 15.000.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="#"><img src="assets/img/casa4.jpeg"></a>
-
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="#">Local centro </a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie:</b> 40m2 </span>
-                                <span class="proerty-price pull-right">$ 75.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="#"><img src="assets/img/casa5.jpeg"></a>
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="#">terreno </a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie :</b> 120.000m2 </span>
-                                <span class="proerty-price pull-right">$ 42.000.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="#"><img src="assets/img/casa7.jpeg"></a>
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="3">Casa céntrica </a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie :</b> 120m2 </span>
-                                <span class="proerty-price pull-right">$ 100.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 p0">
-                        <div class="box-two proerty-item">
-                            <div class="item-thumb">
-                                <a href="#"><img src="assets/img/casa8.jpeg"></a>
-                            </div>
-                            <div class="item-entry overflow">
-                                <h5><a href="#">Deptos modernos </a></h5>
-                                <div class="dot-hr"></div>
-                                <span class="pull-left"><b>Superficie :</b> 88m2 </span>
-                                <span class="proerty-price pull-right">$ 32.000.000</span>
                             </div>
                         </div>
                     </div>
