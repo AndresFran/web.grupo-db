@@ -1,3 +1,7 @@
+<?PHP
+include('php/list_inmuebles_destacados');
+include('php/det_inmueble.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -57,10 +61,8 @@
                 <div class="col-md-2 col-md-offset-5  col-sm-3 col-sm-offset-1  col-xs-12">
                     <div class="header-half header-social">
                         <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/grupodb" target="_blank"><i
-                                        class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es"
-                                    target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/grupodb" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,37 +152,7 @@
                                 </div>
 
                                 <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                    <li data-thumb="assets/img-detalle/1.jpeg">
-                                        <img src="assets/img-detalle/1.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/2.jpeg">
-                                        <img src="assets/img-detalle/2.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/3.jpeg">
-                                        <img src="assets/img-detalle/3.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/4.jpeg">
-                                        <img src="assets/img-detalle/4.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/9.jpeg">
-                                        <img src="assets/img-detalle/9.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/6.jpeg">
-                                        <img src="assets/img-detalle/6.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/7.jpeg">
-                                        <img src="assets/img-detalle/7.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/8.jpeg">
-                                        <img src="assets/img-detalle/8.jpeg" />
-                                    </li>
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/10.jpeg">
-                                        <img src="assets/img-detalle/10.jpeg" />
-                                    </li>
-                                    <li data-thumb="assets/img-detalle/12.jpeg">
-                                        <img src="assets/img-detalle/12.jpeg" />
-                                    </li>
+                                    <?PHP echo $listadoImg; ?>
                                 </ul>
                             </div>
                         </div>
@@ -345,8 +317,7 @@
                             <h4 class="s-property-title">Video de la Propiedad</h4>
                             <div class="video-thumb">
                                 <a class="video-popup" href="assets/mp4/enlace3.mp4" title="Virtual Tour">
-                                    <video src="assets/mp4/enlace3.mp4" class="img-responsive wp-post-image"
-                                        alt="Exterior">
+                                    <video src="assets/mp4/enlace3.mp4" class="img-responsive wp-post-image" alt="Exterior">
                                 </a>
                             </div>
                         </div>
@@ -377,8 +348,7 @@
                                                 <!-- <a class="twitter" target="_blank" href="">
                                                         <i class="fa fa-twitter"></i>
                                                     </a> -->
-                                                <a class="facebook" target="_blank"
-                                                    href="https://www.facebook.com/grupodb" target="_blank">
+                                                <a class="facebook" target="_blank" href="https://www.facebook.com/grupodb" target="_blank">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
                                                 <!-- <a class="gplus" target="_blank" href="">
@@ -387,9 +357,7 @@
                                                 <!-- <a class="linkedin" target="_blank" href="">
                                                         <i class="fa fa-linkedin"></i>
                                                     </a>  -->
-                                                <a class="instagram" target="_blank"
-                                                    href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es"
-                                                    target="_blank">
+                                                <a class="instagram" target="_blank" href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es" target="_blank">
                                                     <i class="fa fa-instagram"></i>
                                                 </a>
                                             </div>
@@ -840,15 +808,11 @@
 
                             <div class="social pull-right">
                                 <ul>
-                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com/grupodb"
-                                            target="_blank" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a>
+                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com/grupodb" target="_blank" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a>
                                     </li>
-                                    <li><a class="wow fadeInUp animated"
-                                            href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es"
-                                            target="_blank" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a>
+                                    <li><a class="wow fadeInUp animated" href="https://www.instagram.com/grupodbcorredoresinmobiliarios/?hl=es" target="_blank" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a>
                                     </li>
-                                    <li><a class="wow fadeInUp animated" href="mailto:inmobiliaria@grupo-db.com.ar"
-                                            target="_blank" data-wow-delay="0.6s"><i class="fa fa-envelope"></i></a>
+                                    <li><a class="wow fadeInUp animated" href="mailto:inmobiliaria@grupo-db.com.ar" target="_blank" data-wow-delay="0.6s"><i class="fa fa-envelope"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -869,8 +833,7 @@
                     <div class="bottom-menu pull-right">
                         <ul>
                             <li><a class="wow fadeInUp animated" href="index.php" data-wow-delay="0.2s">Inicio</a></li>
-                            <li><a class="wow fadeInUp animated" href="inmuebles.php"
-                                    data-wow-delay="0.3s">Inmuebles</a></li>
+                            <li><a class="wow fadeInUp animated" href="inmuebles.php" data-wow-delay="0.3s">Inmuebles</a></li>
                             <li><a class="wow fadeInUp animated" href="preguntas.html" data-wow-delay="0.4s">Preguntas
                                     Frecuentes</a></li>
                             <li><a class="wow fadeInUp animated" href="contacto.html" data-wow-delay="0.6s">Contacto</a>
@@ -900,7 +863,7 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
             $('#image-gallery').lightSlider({
                 gallery: true,
@@ -910,7 +873,7 @@
                 speed: 500,
                 auto: true,
                 loop: true,
-                onSliderLoad: function () {
+                onSliderLoad: function() {
                     $('#image-gallery').removeClass('cS-hidden');
                 }
             });
