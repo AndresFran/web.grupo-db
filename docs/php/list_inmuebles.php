@@ -117,12 +117,12 @@ while ($inmuebles = mysqli_fetch_assoc($rtsinmuebles)) {
     $listado .= "<h5><a href='detalle-inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "&operacion=" . $inmuebles['idOperacion'] . "&propiedad=" . $inmuebles['idPropiedad'] . "'>" .  $inmuebles['tituloInmueble'] . "</a></h5>";
     $listado .= "<div class='dot-hr'></div>";
     $listado .= "<span class='pull-left'><b> Superficie :</b>" . $superficieCubiertaInmueble . "</span>";
-    $listado .= "<span class='proerty-price pull-right'> $ 7.000.000</span>";
+    $listado .= "<span class='proerty-price pull-right'>" . $valorInmueble . "</span>";
     $listado .= "<p style='display: none;'>Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>";
     $listado .= "<div class='property-icon'>";
     $listado .= "<img src='assets/img/icon/bed.png'>(" . $habitacionesInmueble . ")|";
-    $listado .= "<img src='assets/img/icon/shawer.png'>(" . $habitacionesInmueble . ")|";
-    $listado .= "<img src='assets/img/icon/cars.png'>(0)";
+    $listado .= "<img src='assets/img/icon/shawer.png'>(" . $banosInmueble . ")|";
+    $listado .= "<img src='assets/img/icon/cars.png'>(" . $inmuebles['cocheraInmueble'] . ")";
     $listado .= "</div>";
     $listado .= "</div>";
     $listado .= "</div>";
