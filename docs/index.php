@@ -100,7 +100,7 @@ include('php/list_inmuebles_index.php');
                     </li>
 
                     <li class="wow fadeInDown" data-wow-delay="0.9s">
-                        <a class="" href="inmuebles.html">Inmuebles</a>
+                        <a class="" href="inmuebles.php">Inmuebles</a>
                     </li>
 
                     <li class="wow fadeInDown" data-wow-delay="1.1s">
@@ -142,7 +142,7 @@ include('php/list_inmuebles_index.php');
 
                     <div class="search-form wow pulse" data-wow-delay="0.8s">
 
-                        <form action="" class=" form-inline">
+                        <form action="inmuebles.php" class=" form-inline">
 
                             <div class="form-group">
                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo de Propiedad">
@@ -206,12 +206,12 @@ include('php/list_inmuebles_index.php');
                     <div class="col-sm-6 col-md-3 p0">
                         <div class="box-tree more-proerty text-center">
                             <div class="item-tree-icon">
-                                <a href="inmuebles.html"> <i class="fa fa-th"></i></a>
+                                <a href="inmuebles.php"> <i class="fa fa-th"></i></a>
                             </div>
                             <div class="more-entry overflow">
                                 <h5>¿Querés ver más?</h5>
                                 <h5 class="tree-sub-ttl">Mostrar todos los inmuebles</h5>
-                                <a href="inmuebles.html"><button class="btn border-btn more-black" value="inmuebles">Inmuebles</button></a>
+                                <a href="inmuebles.php"><button class="btn border-btn more-black" value="inmuebles">Inmuebles</button></a>
                             </div>
                         </div>
                     </div>
@@ -353,14 +353,14 @@ include('php/list_inmuebles_index.php');
                 <div class="col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0 col-xs-12">
                     <div class="asks-first">
                         <div class="asks-first-circle">
-                            <a href="inmuebles.html"> <span class="fa fa-search"></span></a>
+                            <a href="inmuebles.php"> <span class="fa fa-search"></span></a>
                         </div>
                         <div class="asks-first-info">
                             <h2>¿Estás buscando alguna propiedad?</h2>
                             <p> Ingresá y estudiá la oferta que tenemos para vos</p>
                         </div>
                         <div class="asks-first-arrow">
-                            <a href="inmuebles.html"><span class="fa fa-angle-right"></span></a>
+                            <a href="inmuebles.php"><span class="fa fa-angle-right"></span></a>
                         </div>
                     </div>
                 </div>
@@ -416,7 +416,7 @@ include('php/list_inmuebles_index.php');
                                 <li><a href="index.html">Inicio</a> </li>
                                 <li><a href="nosotros.html">Acerca de</a></li>
                                 <li><a href="servicios.html">Servicios</a> </li>
-                                <li><a href="inmuebles.html">Inmuebles</a> </li>
+                                <li><a href="inmuebles.php">Inmuebles</a> </li>
                                 <li><a href="contacto.html">Contacto</a></li>
                                 <li><a href="preguntas.html">Preguntas Frecuentes</a> </li>
                                 <li><a href="https://www.grupo-db.com.ar/gestion/">Gesti&oacute;n</a> </li>
@@ -508,7 +508,7 @@ include('php/list_inmuebles_index.php');
                     <div class="bottom-menu pull-right">
                         <ul>
                             <li><a class="wow fadeInUp animated" href="index.html" data-wow-delay="0.2s">Inicio</a></li>
-                            <li><a class="wow fadeInUp animated" href="inmuebles.html" data-wow-delay="0.3s">Inmuebles</a></li>
+                            <li><a class="wow fadeInUp animated" href="inmuebles.php" data-wow-delay="0.3s">Inmuebles</a></li>
                             <li><a class="wow fadeInUp animated" href="preguntas.html" data-wow-delay="0.4s">Preguntas
                                     Frecuentes</a></li>
                             <li><a class="wow fadeInUp animated" href="contacto.html" data-wow-delay="0.6s">Contacto</a>
