@@ -151,9 +151,9 @@ include('php/list_inmuebles_destacados');
                                     </a>
                                 </div>
 
-                                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                    <?PHP echo $listadoImg; ?>
-                                </ul>
+                                <!-- <ul id="image-gallery" class="gallery list-unstyled cS-hidden"> -->
+                                <?PHP echo $listadoImg; ?>
+                                <!-- </ul> -->
                             </div>
                         </div>
                     </div>
@@ -256,52 +256,51 @@ include('php/list_inmuebles_destacados');
                             <ul class="additional-details-list clearfix">
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Cloaca</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Si</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $cloacaInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Red de Gas Natural</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Si</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $gasNaturalInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Tipo de Agua Caliente</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Termotanque a gas</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $tipoAguaCalienteInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Agua corriente</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Si</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $aguaCorrienteInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Pavimento</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Si</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $pavimentoInmueble; ?></span>
                                 </li>
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Frente del terreno</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">25 m</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $frenteTerrenoInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Largo del terreno</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">100 m</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $largoTerrenoInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Antigüedad </span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">15 años</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $antiguedadInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Estado del inmueble:</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Muy bueno</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP echo $estadoInmueble; ?></span>
                                 </li>
 
                                 <li>
                                     <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Cochera:</span>
-                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Techada con espacio para 2
-                                        vehículos</span>
+                                    <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP $tipoCocheraInmueble; ?></span>
                                 </li>
                             </ul>
                         </div>

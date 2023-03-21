@@ -25,10 +25,10 @@ if (!empty($inmueble['cocheraInmueble'])) {
     $cocheraInmueble = "&nbsp;-&nbsp;";
 }
 if (!empty($inmueble['tipoCocheraInmueble'])) {
-    $cocheraInmueble .= "&nbsp;-&nbsp;" . $inmueble['tipoCocheraInmueble'];
+    $tipoCocheraInmueble .= "&nbsp;-&nbsp;" . $inmueble['tipoCocheraInmueble'];
 }
 if ($inmueble['vehiculosCocheraInmueble'] > 0) {
-    $cocheraInmueble .= "&nbsp;-&nbsp;Vehiculos: " . $inmueble['vehiculosCocheraInmueble'];
+    $vehiculosCocheraInmueble .= "&nbsp;-&nbsp;Vehiculos: " . $inmueble['vehiculosCocheraInmueble'];
 }
 
 if ($inmueble['plantasInmueble'] > 0) {
@@ -135,8 +135,8 @@ if (!file_exists($nomimg)) {
     $rtsimagenes = mysqli_query($conexion, $queryimagenes);
     while ($imagenes = mysqli_fetch_assoc($rtsimagenes)) {
         $imagen = "/gestion/assets/images/inmuebles/" . str_pad($imagenes['idImagen'], 8, "0", STR_PAD_LEFT) . "." . $imagenes['tipoImagen'];
-        $listadoImg .= "<li data-thumb='" . $nomimg . "'>";
-        $listadoImg .= "<img src='" . $nomimg . "' />";
+        $listadoImg .= "<li data-thumb='" . $imagen . "'>";
+        $listadoImg .= "<img src='" . $imagen . "' />";
         $listadoImg .= "</li>";;
         $vistaImg .= "<div><img src='" . $imagen . "' alt='Image' width='950px'></div>";
     }
