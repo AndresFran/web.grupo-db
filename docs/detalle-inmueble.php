@@ -38,6 +38,8 @@ include('php/list_inmuebles_destacados');
     <link rel="stylesheet" href="assets/css/lightslider.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
 </head>
 
 <body>
@@ -160,7 +162,7 @@ include('php/list_inmuebles_destacados');
 
                     <div class="single-property-wrapper">
                         <div class="single-property-header">
-                            <h1 class="property-title pull-left"><?PHP echo $inmuebles['tituloInmueble']; ?></h1>
+                            <h1 class="property-title pull-left"><?PHP echo $tituloInmueble; ?></h1>
                             <span class="property-price pull-right"><?PHP echo $valorInmueble; ?></span>
                         </div>
 
@@ -172,7 +174,7 @@ include('php/list_inmuebles_destacados');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Operación</span>
-                                    <span class="property-info-value"><?PHP echo $inmuebles['nombreOperacion']; ?></span>
+                                    <span class="property-info-value"><?PHP echo $nombreOperacion; ?></span>
                                 </span>
                             </div>
 
@@ -232,7 +234,7 @@ include('php/list_inmuebles_destacados');
                                 </span>
                                 <span class="property-info-entry">
                                     <span class="property-info-label">Baños</span>
-                                    <span class="property-info-value"><?PHP $banosInmueble; ?></span>
+                                    <span class="property-info-value"><?PHP echo $banosInmueble; ?></span>
                                 </span>
                             </div>
 
@@ -241,9 +243,21 @@ include('php/list_inmuebles_destacados');
                         <!-- .property-meta -->
 
                         <div class="section">
+                            <h4 class="s-property-title">Ubicacion</h4>
+                            <div class="s-property-content">
+                                <p> <?PHP echo $domicilio; ?>
+                                    <?PHP echo $nombreLocalidad; ?>
+                                </p>
+                                <?PHP if (!empty($ubicacionInmueble)) { ?>
+                                    <!-- <div id="myMap" name="myMap" style="height: 400px" required></div> -->
+                                    <a href="https://www.google.com/maps?q=<?PHP echo $ubicacionInmueble; ?>&z=17&hl=es" target="_blank" class="btn btn-info">Ver en el Mapa</a>
+                                <?PHP } ?>
+                            </div>
+                        </div>
+                        <div class="section">
                             <h4 class="s-property-title">Descripción</h4>
                             <div class="s-property-content">
-                                <p><?PHP echo $inmuebles['descripcionInmueble']; ?>
+                                <p><?PHP echo $descripcionInmueble; ?>
                                 </p>
                             </div>
                         </div>
@@ -299,7 +313,7 @@ include('php/list_inmuebles_destacados');
                                 </li>
 
                                 <li>
-                                    <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Cochera:</span>
+                                    <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Tipo Cochera:</span>
                                     <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry"><?PHP $tipoCocheraInmueble; ?></span>
                                 </li>
                             </ul>
@@ -309,16 +323,22 @@ include('php/list_inmuebles_destacados');
 
                         <!-- End features area  -->
 
-                        <div class="section property-video">
-                            <h4 class="s-property-title">Video de la Propiedad</h4>
-                            <div class="video-thumb">
-                                <a class="video-popup" href="assets/mp4/enlace3.mp4" title="Virtual Tour">
-                                    <video src="assets/mp4/enlace3.mp4" class="img-responsive wp-post-image" alt="Exterior">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- End video area  -->
 
+
+
+                        <?PHP
+                        $video = "/gestion/assets/videos/" . str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT) . ".mp4";
+                        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $video)) { ?>
+                            <div class="section property-video">
+                                <h4 class="s-property-title">Video de la Propiedad</h4>
+                                <div class="video-thumb">
+                                    <a class="video-popup" href="<?PHP echo $video; ?>" title="Virtual Tour">
+                                        <video src="<?PHP echo $video; ?>" class="img-responsive wp-post-image" alt="Exterior">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End video area  -->
+                        <?PHP } ?>
                     </div>
                 </div>
 
@@ -383,143 +403,11 @@ include('php/list_inmuebles_destacados');
 
                         <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Propiedades similares</h3>
+                                <h3 class="panel-title"><?PHP echo $tituloDestacado ?></h3>
                             </div>
                             <div class="panel-body recent-property-widget">
                                 <ul>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa3.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa en Rivadavia </a></h6>
-                                            <span class="property-price">USD59.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa4.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Finca en Rawson </a></h6>
-                                            <span class="property-price">$30.000.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa5.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa Quinta </a></h6>
-                                            <span class="property-price">USD78.000</span>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa6.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa de campo </a></h6>
-                                            <span class="property-price">USD 88.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa3.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa en Santa Lucía </a></h6>
-                                            <span class="property-price">USD59.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa3.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa en Rivadavia </a></h6>
-                                            <span class="property-price">USD59.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa4.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Finca en Rawson </a></h6>
-                                            <span class="property-price">$30.000.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa5.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa Quinta </a></h6>
-                                            <span class="property-price">USD78.000</span>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa6.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa de campo </a></h6>
-                                            <span class="property-price">USD 88.000</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                            <a href="single.html"><img src="assets/img/casa3.jpeg"></a>
-                                            <span class="property-seeker">
-                                                <!-- <b class="b-1">A</b>
-                                                    <b class="b-2">S</b> -->
-                                            </span>
-                                        </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                            <h6> <a href="single.html">Casa en Santa Lucía </a></h6>
-                                            <span class="property-price">USD59.000</span>
-                                        </div>
-                                    </li>
-
+                                    <?PHP echo $destacado; ?>
                                 </ul>
                             </div>
                         </div>
@@ -874,6 +762,29 @@ include('php/list_inmuebles_destacados');
                 }
             });
         });
+    </script>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="">
+    </script>
+    <!--script src="assets/js/mapview.js"></script-->
+
+    <script>
+        const tilesProvider = "	https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+
+        var latlng = "<?= $ubicacionInmueble ?>";
+        //console.log("Ubicacion: " + latlng); 
+
+        let coordenadas = latlng.split(',')
+        let myMap = L.map('myMap').setView(coordenadas, 15)
+
+        //let myMap = L.map('myMap').setView([-31.5373, -68.5251], 14)
+
+        L.tileLayer(tilesProvider, {
+            maxZoom: 18,
+        }).addTo(myMap)
+
+        let marker = L.marker(coordenadas).addTo(myMap)
     </script>
 
 </body>

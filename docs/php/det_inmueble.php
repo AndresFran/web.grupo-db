@@ -114,6 +114,12 @@ if ($inmueble['valorInmueble'] > 0) {
     $valorInmueble = "Consultar";
 }
 
+$tituloInmueble = $inmueble['tituloInmueble'];
+$nombreOperacion = $inmueble['nombreOperacion'];
+$descripcionInmueble = $inmueble['descripcionInmueble'];
+$nombreLocalidad = $inmueble['nombreLocalidad'];
+
+
 
 $queryimagen = "SELECT * FROM imagen WHERE idInmueble = '$idInmueble' AND baja != '1' ORDER BY ordenImagen ASC LIMIT 1";
 $rtsimagen = mysqli_query($conexion, $queryimagen);
